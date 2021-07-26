@@ -6,7 +6,6 @@ git branch: 'development', credentialsId: 'abced4b2-40e3-4849-90fa-6b09ebe6cc39'
 stage ( 'Build' ){
 sh "${mavenHome}/bin/mvn clean package"
 }
-/*
 stage ( 'executeSonarQubeReport' ){
 sh  "${mavenHome}/bin/mvn sonar:sonar"
 }
@@ -23,5 +22,4 @@ emailext body: '''Build Done
 Regards
 Soujanya Gutta''', subject: 'build over', to: 'soujanyagutta1993@gmail.com,sjes4444@gmail.com,sowjanyagutta94@gmail.com'
 }
-*/
 }
